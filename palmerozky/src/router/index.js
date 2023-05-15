@@ -1,19 +1,47 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Inicio from '../views/InicioVista.vue'
+import Contacto from '../views/ContactoVista.vue'
+import Contenido from '../views/ContenidoVista.vue'
+import InicioSesion from '../views/InicioSesion.vue'
+import Mediakit from '../views/MediakitVista.vue'
+import Registro from '../views/RegistroVista.vue'
+import Tienda from '../views/TiendaVista.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'InicioVista',
+    component: Inicio
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/ContenidoVista',
+    name: 'ContenidoVista',
+    component: Contenido
+  },
+  {
+    path: '/MediakitVista',
+    name: 'MediakitVista',
+    component: Mediakit
+  },
+  {
+    path: '/TiendaVista',
+    name: 'TiendaVista',
+    component: Tienda
+  },
+  {
+    path: '/ContactoVista',
+    name: 'ContactoVista',
+    component: Contacto
+  },
+  {
+    path: '/RegistroVista',
+    name: 'RegistroVista',
+    component: Registro
+  },
+  {
+    path: '/InicioSesion',
+    name: 'InicioSesion',
+    component: InicioSesion
   }
 ]
 
