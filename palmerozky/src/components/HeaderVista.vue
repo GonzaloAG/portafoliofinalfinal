@@ -1,17 +1,15 @@
 <template>
   <header class="header">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-2">
-          <img class="logo" src="/path/to/logo.png" alt="Logo">
-        </div>
-        <div class="col-lg-8 text-center">
-          <h1 class="logo-text">palmerozky</h1>
-        </div>
-        <div class="col-lg-2 text-end">
-          <p class="small-text">Iniciar sesión</p>
-          <p class="small-text">¿No tienes cuenta? Regístrate</p>
-        </div>
+    <div class="logo">
+      <img src="../assets/8e4e2e7c-6ea9-4674-a303-a457a6f463ec-profile_image-300x300.png" alt="Logo" />
+    </div>
+    <h1 class="title">Palmerozky</h1>
+    <div class="right-texts">
+      <div class="text-container">
+        <p class="login-text">Iniciar sesión</p>
+      </div>
+      <div class="text-container">
+        <p class="register-text">¿No tienes cuenta? Regístrate</p>
       </div>
     </div>
   </header>
@@ -19,20 +17,54 @@
 
 <style scoped>
 .header {
-  background-color: black;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo img {
+  width: 75px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.title {
   color: white;
-  padding: 20px;
+  text-align: center;
+  flex: 1;
+  align-self: center;
 }
 
-.logo {
-  height: 50px;
+.right-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.logo-text {
-  font-size: 36px;
+.text-container {
+  margin-bottom: 5px;
 }
 
-.small-text {
-  font-size: 12px;
+.right-texts p {
+  color: white;
+  margin-right: 10px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 767px) {
+  /* Styles for mobile devices */
+  .header {
+    justify-content: center;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .right-texts {
+    display: none;
+  }
 }
 </style>

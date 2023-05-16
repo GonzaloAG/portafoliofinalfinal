@@ -1,12 +1,12 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 60px;">
       <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav" style="background-color: #343a40;">
             <li class="nav-item">
               <router-link class="nav-link" :class="{ active: isActive('/') }" to="/">Inicio</router-link>
             </li>
@@ -40,7 +40,7 @@
   
   <style scoped>
   .navbar {
-    background-color: black;
+    background-color: #343a40;
   }
   
   .navbar-dark .navbar-nav .nav-link {
@@ -49,5 +49,23 @@
   
   .navbar-dark .navbar-nav .nav-link.active {
     background-color: darkred;
+  }
+  
+  .navbar-dark .navbar-nav {
+    background-color: #343a40;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  @media (max-width: 767px) {
+    .navbar-collapse {
+      justify-content: center;
+    }
+  
+    .navbar-toggler {
+      order: -1;
+    }
   }
   </style>
