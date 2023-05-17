@@ -4,23 +4,25 @@
       <CarruselVista></CarruselVista>
     </div>
     <div>
-      asdjaklsdasldkalsd
+      <SobreMi></SobreMi>
     </div>
   </main>
 </template>
 
 <script>
+import SobreMi from "@/components/SobreMi.vue";
 import CarruselVista from "../components/CarruselVista.vue";
 
 export default {
   components: {
-    CarruselVista
-  }
+    CarruselVista,
+    SobreMi
+}
 };
 </script>
 
 <style scoped>
 main{
-  background-color: red;
+  background-color: black!important;;
 }
 </style>
